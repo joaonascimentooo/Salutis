@@ -1,0 +1,50 @@
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### Logs & Temporários ###
+*.log
+*.log.*
+logs/
+tmp/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Local Overrides & Secrets ###
+application-prod.properties
+*.properties.local
+.env
+.env.local
+
+### Documentação em Revisão ###
+AUTENTICACAO_DOCUMENTACAO.md
+GUIA_TESTES.md
+README_AUTENTICACAO.md
+SETUP_MANUTENCAO.md

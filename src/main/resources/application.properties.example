@@ -1,0 +1,29 @@
+spring.application.name=Salutis
+
+# ===== DATABASE (PostgreSQL) =====
+# Copiar este arquivo para application.properties e preencher os valores reais
+spring.datasource.url=jdbc:postgresql://localhost:5432/salutis_db
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.username=postgres
+spring.datasource.password=root_password_aqui
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=false
+spring.jpa.properties.hibernate.format_sql=true
+
+# ===== JWT ===== 
+# Gerar uma chave segura de pelo menos 32 caracteres
+app.jwt.secret=sua_chave_jwt_secreta_minimo_32_caracteres_aqui
+app.jwt.expiration=86400000
+
+# ===== LOGGING =====
+logging.level.root=INFO
+logging.level.com.backend=INFO
+logging.level.org.springframework.security=INFO
+
+# ===== SWAGGER/OPENAPI =====
+springdoc.swagger-ui.path=/swagger-ui.html
+springdoc.swagger-ui.enabled=true
+springdoc.api-docs.path=/v3/api-docs
+
+spring.web.resources.add-mappings=false
