@@ -173,7 +173,7 @@ Este projeto implementa boas práticas de segurança:
 | PostgreSQL | 12+ | Banco de Dados |
 | JWT (jjwt) | 0.12.5 | Tokens |
 | Lombok | - | Reduz Boilerplate |
-| Swagger/OpenAPI | 2.0.4 | Documentação |
+| Swagger/OpenAPI | 3.0.3 | Documentação |
 | Maven | 3.8.9+ | Build Tool |
 
 ---
