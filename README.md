@@ -178,40 +178,6 @@ Este projeto implementa boas práticas de segurança:
 
 ---
 
-## 📁 Estrutura do Projeto
-
-```
-src/main/java/com/backend/
-├── SalutisApplication.java          # Entry point
-├── config/                          # Configurações
-│   ├── JwtProperties.java          # Properties JWT
-│   ├── OpenApiConfig.java          # Swagger/OpenAPI
-│   └── SecurityConfig.java         # Spring Security
-├── controller/                      # REST Controllers
-│   ├── AuthController.java         # Login & Register
-│   └── UserController.java         # Gerenciamento de usuários
-├── domain/                          # Entidades JPA
-│   ├── User.java
-│   └── UserRole.java
-├── dto/                             # Data Transfer Objects
-│   ├── AuthResponse.java
-│   ├── LoginRequest.java
-│   └── RegisterRequest.java
-├── exception/                       # Tratamento de erros
-│   ├── ErrorResponse.java
-│   └── GlobalExceptionHandler.java
-├── repository/                      # Data Access
-│   └── UserRepository.java
-├── security/                        # Segurança
-│   ├── JwtAuthenticationFilter.java # Filtro JWT
-│   └── JwtUtil.java                # Utilitários JWT
-├── service/                         # Lógica de negócio
-│   └── UserService.java
-└── validation/                      # Validadores customizados
-    └── (validadores)
-```
-
----
 
 ## 🧪 Testes
 
@@ -306,9 +272,9 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](./LI
 
 ## 👤 Autor
 
-**Jonas Nascimento**
+**João Nascimento**
 - GitHub: [@joaonascimentooo](https://github.com/joaonascimentooo)
-- Email: joaonascimentooo@example.com
+- Email: joaonascimento197@gmail.com
 
 ---
 
@@ -321,4 +287,4 @@ Encontrou um problema?
 
 ---
 
-**Made with ❤️ by Jonas Nascimento**
+**Made with ❤️ by João Nascimento**
