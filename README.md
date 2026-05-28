@@ -272,9 +272,9 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](./LI
 
 ## 👤 Autor
 
-**Jonas Nascimento**
+**João Nascimento**
 - GitHub: [@joaonascimentooo](https://github.com/joaonascimentooo)
-- Email: joaonascimentooo@example.com
+- Email: joaonascimento197@gmail.com
 
 ---
 
@@ -287,4 +287,4 @@ Encontrou um problema?
 
 ---
 
-**Made with ❤️ by Jonas Nascimento**
+**Made with ❤️ by João Nascimento**
