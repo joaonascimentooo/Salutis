@@ -15,10 +15,6 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
-/**
- * Filtro que intercepta todas as requisições e valida o JWT token.
- * Executa uma vez por requisição.
- */
 @Slf4j
 @Component
 @RequiredArgsConstructor
@@ -54,9 +50,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 
-    /**
-     * Extrai o token do header Authorization
-     */
     private String extractToken(HttpServletRequest request) {
         String authHeader = request.getHeader(AUTHORIZATION_HEADER);
 
