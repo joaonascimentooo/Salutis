@@ -46,7 +46,7 @@ public class Patient {
     
     @Column(nullable = false)
     private LocalDate birthDate;
-    
+
     @Column(nullable = false, unique = true)
     private String cpf;
     
