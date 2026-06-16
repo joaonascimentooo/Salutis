@@ -1,0 +1,12 @@
+package com.backend.dto;
+
+import lombok.Data;
+
+@Data
+public class DoctorRequest {
+
+    private String crm;
+    private String specialty;
+    private String professionalTitle;
+    
+}
