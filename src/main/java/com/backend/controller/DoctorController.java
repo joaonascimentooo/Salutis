@@ -35,7 +35,7 @@ public class DoctorController {
     public ResponseEntity<DoctorResponse> register(@Valid @RequestBody DoctorRequest request, Authentication authentication ){
         String userEmail = authentication.getName();
 
-        log.info("");
+        log.info("Cadastro de médico solicitado pelo usuário: {}", userEmail);
 
         DoctorResponse response = doctorService.register(request, userEmail);
 
