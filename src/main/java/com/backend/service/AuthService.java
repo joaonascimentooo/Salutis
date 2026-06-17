@@ -57,7 +57,7 @@ public class AuthService implements UserDetailsService {
                 .name(request.getName())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
-                .role(UserRole.PATIENT)
+            .role(UserRole.USER)
                 .active(true)
                 .build();
 
