@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.backend.domain.Patient;
 import com.backend.domain.User;
+import com.backend.domain.UserRole;
 import com.backend.dto.PatientRegisterRequest;
 import com.backend.dto.PatientResponse;
 import com.backend.repository.PatientRepository;
@@ -31,6 +32,9 @@ public class PatientService {
         ensureUserDoesNotHavePatient(user.getId());
 
         ensureCpfIsAvailable(request.getCpf());
+
+        user.setRole(UserRole.PATIENT);
+        userRepository.save(user);
 
         
         Patient patient = Patient.builder()
