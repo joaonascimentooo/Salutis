@@ -1,16 +1,21 @@
 package com.backend.controller;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.backend.dto.DoctorRequest;
 import com.backend.dto.DoctorResponse;
+import com.backend.dto.DoctorUpdateRequest;
 import com.backend.service.DoctorService;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -42,6 +47,23 @@ public class DoctorController {
 
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
+
+    @PatchMapping("/me")
+    @Operation(
+        summary = "Atualizar meu perfil de médico",
+        description = "Atualiza o perfil do médico vinculado ao usuário autenticado"
+    )
+    public ResponseEntity<DoctorResponse> updateMyDoctor(
+            @Valid @RequestBody DoctorUpdateRequest request,
+            Authentication authentication) {
+        String userEmail = authentication.getName();
+
+        log.info("Atualização de médico solicitada pelo usuário: {}", userEmail);
+
+        DoctorResponse response = doctorService.updateMyDoctor(request, userEmail);
+
+        return ResponseEntity.ok(response);
+    }
     
          @GetMapping("/me")
          @Operation(
@@ -56,4 +78,18 @@ public class DoctorController {
 
             return ResponseEntity.ok(response);
          }
+
+    @GetMapping
+    @PreAuthorize("hasRole('ADMIN')")
+    @Operation(
+        summary = "Listar médicos",
+        description = "Retorna a lista de médicos para uso administrativo"
+    )
+    public ResponseEntity<List<DoctorResponse>> listDoctors() {
+        log.info("Listagem administrativa de médicos solicitada");
+
+        List<DoctorResponse> response = doctorService.listAllDoctors();
+
+        return ResponseEntity.ok(response);
+    }
 }
