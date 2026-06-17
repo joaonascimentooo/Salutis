@@ -39,6 +39,15 @@ public class DoctorService {
         return toResponse(savedDoctor);
     }
 
+    public DoctorResponse getByUserEmail(String userEmail) {
+        Doctor doctor = doctorRepository.findByUser_Email(userEmail)
+                .orElseThrow(() -> new UsernameNotFoundException(
+                        "Médico não encontrado para o usuário: " + userEmail
+                ));
+
+        return toResponse(doctor);
+    }
+
     private void ensureUserDoesNotHaveDoctor(String userId){
         if (doctorRepository.existsByUser_Id(userId)) {
             throw new IllegalArgumentException("Esse usuário já possui cadastro de doutor");
